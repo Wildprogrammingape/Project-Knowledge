@@ -1,0 +1,10 @@
+preventDefault() 用于 event handler函数中的 表单验证，可以阻止form 提交到服务器，并提示错误信息：
+
+例子 (当form表格的fname和lname为空时候阻止提交)：
+
+form.onsubmit = function(e) {
+  if (fname.value === '' || lname.value === '') {
+    e.preventDefault();
+    para.textContent = 'You need to fill in both names!';
+  }
+}

@@ -1,0 +1,27 @@
+NodeList objects are collection of nodes  (NodeList 对象是节点的集合)
+
+通常是由property 如Node.childNodes 和 method 如document.querySelectorAll 返回的。
+
+它是一个类似数组的对象
+
+常用propery:
+
+NodeList.length -- 节点数
+
+常用method：
+
+NodeList.item() -- 返回该index的node，等价于 NodeList[i]
+
+
+例子： 用for 循环或 for of 循环遍历 NodeList对象的所有节点
+
+for (var i = 0; i < myNodeList.length; ++i) {
+  var item = myNodeList[i];  // 调用 myNodeList.item(i) 是没有必要的
+}
+
+或
+
+var list = document.querySelectorAll('input[type=checkbox]');
+for (var checkbox of list) {
+  checkbox.checked = true;
+}

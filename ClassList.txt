@@ -1,0 +1,68 @@
+element.classList 是一个DOMTokenList 对象Object，返回 element的class arrtibute的内容
+
+常用method:
+
+element.classList  --  返回该元素的CSS Class Collection 类集合
+element.classList.add()  -- 将CSS类添加到元素的类列表中
+element.classList.remove()  -- 从元素的类列表中删除CSS类
+element.classList.replace() --将现有的类替换为新的类
+element.classList.contains() --检查元素的类列表是否包含指定的类
+element.classList.toggle() -- 切换添加或删除类
+
+例子：
+
+1) 获取 element 的 css class
+
+<div id="content" class="main red">JavaScript classList</div>  // 该element有两个classes: main 和 red
+
+let div = document.querySelector('#content');    
+for (let cssClass of div.classList) {			// 用 for of 循环遍历element.classList
+    console.log(cssClass);
+}
+
+>>
+main
+red
+
+2) element.classList.add() method
+
+let div = document.querySelector('#content');    // 为 div添加class "info"
+div.classList.add('info');
+
+
+let div = document.querySelector('#content');   // 为 div添加 class "info visible block"
+div.classList.add('info','visible','block');
+
+3) element.classList.remove() 
+
+let div = document.querySelector('#content');    // 为div移除class "visible"
+div.classList.remove('visible');
+
+4) element.classList.replace() 
+
+let div = document.querySelector('#content');   // 将div的class替换为 "warning"
+div.classList.replace('info','warning');
+
+5) element.classList.contains()
+
+let div = document.querySelector('#content');    
+div.classList.contains('warning'); // true	        // 核实element是否有某个class
+	
+6) element.classList.toggle()
+
+let div = document.querySelector('#content');    
+div.classList.toggle('visible');		         // element含有某个class则删除，没有则添加
+
+
+
+
+
+
+
+
+
+
+
+
+
+

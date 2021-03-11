@@ -1,0 +1,12 @@
+
+ÑÕÉ«½¥±ä red -- yellow:
+
+background-image: linear-gradient(0deg, red, yellow);   bottom to top
+background-image: linear-gradient(90deg, red, yellow);   left to right
+background-image: linear-gradient(180deg, red, yellow);  top to bottom
+background-image: linear-gradient(-90deg, red, yellow);   right to left
+
+
+Àý×Ó£º
+
+background-image: linear-gradient(120deg, #f6d365, #fda085);

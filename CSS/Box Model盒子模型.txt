@@ -1,0 +1,11 @@
+every element is a box 所有的元素都是一个盒子，由 margin+border+padding+content组成
+
+box model中常用的css：
+
+width: 300px;
+height: 300px;
+padding: 500px;  		// empty space inside the background of element 
+margin: 100px;    		// empty space outside the element
+border: 10px solid red; 
+box-sizing: border-box;          // width = content + padding + border, 让width和height 包含padding 和border
+

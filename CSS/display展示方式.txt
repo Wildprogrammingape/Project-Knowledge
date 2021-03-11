@@ -1,0 +1,19 @@
+四种常用的display property 展示方式:
+
+1. block 
+
+take up the full row 占据一整行，如div默认为block level
+
+2. inline
+
+take up space as much as necessary只占据需要的空间，如span
+缺点： 不能使用width和height 属性
+
+3. inline-block
+
+可以使用width和height，用来place element side by side，结合了inline 和 block的优点。
+
+
+4. flex (alternative for inline-block)
+
+需要一个container element，只对container里的元素有效

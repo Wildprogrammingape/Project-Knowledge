@@ -1,0 +1,11 @@
+transition 用来过渡css property
+
+例子：
+
+transition: all 1s ease
+
+用于所有property，过渡时间1秒，ease表示渐变先慢后快缓慢结束
+
+transition: margin-right 4s, color 1s;
+
+用于两个property，过渡margin-right 四秒, 过渡color 一秒

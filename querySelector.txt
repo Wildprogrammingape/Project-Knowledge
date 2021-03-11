@@ -1,0 +1,31 @@
+1) 
+
+Document.querySelector() 返回第一个match的element，没有则返回null
+
+The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+
+语法：
+
+element = document.querySelector(selectors);.
+
+例子：
+
+var el = document.querySelector(".myclass");
+
+更复杂的选择：
+
+Selectors can also be really powerful, as demonstrated in the following example. Here, the first <input> element with the name "login" (<input name="login"/>) located inside a <div> whose class is "user-panel main" (<div class="user-panel main">) in the document is returned:
+
+var el = document.querySelector("div.user-panel.main input[name='login']");
+
+2)
+
+Document.querySelectorAll  返回与指定的选择器组所有匹配的NodeList
+
+例子
+
+选择所有的 p :
+var matches = document.querySelectorAll("p");
+
+选择所有的 div下的 note class或者 div下的 alert class:
+const matches = document.querySelectorAll("div.note, div.alert");

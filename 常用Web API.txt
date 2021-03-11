@@ -1,0 +1,92 @@
+1. document.createElement() 创建一个由标签名称 tagName 指定的 HTML 元素
+
+2. element.innerHTML 获取该element的HTML     VS    Element.innerText 代表已渲染的content
+
+3. element.classList 是 Array-like Object返回该element的 class attributes，element.classList.add 效果等同于 element.className
+
+4. document.createTextNode() 创建一个文本节点, 内容为字符串，该节点作为某个element等的child。如 p.appendChild(TextNode)
+
+1) 例子：
+
+HTML：
+
+创建一个新的 <div> 并且插入到ID为“div1”的元素前。
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>||Working with elements||</title>
+</head>
+<body>
+  <div id="div1">The text above has been created dynamically.</div>
+</body>
+</html>
+
+
+JavaScript：
+
+document.body.onload = addElement;
+
+function addElement () {
+  // 创建一个新的 div 元素
+  let newDiv = document.createElement("div");
+  // 给它一些内容
+  let newContent = document.createTextNode("Hi there and greetings!");
+  // 添加文本节点 到这个新的 div 元素
+  newDiv.appendChild(newContent);
+
+  // 将这个新的元素和它的文本添加到 DOM 中
+  let currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+
+2)
+
+document.getElementById("myP").innerHTML = "Hello Dolly.";
+
+newTodo.innerText = todoInput.value
+
+3) 
+//  添加一个新的element div
+const div = document.createElement('div');
+div.className = 'foo';
+
+// 初始状态：<div class="foo"></div>
+console.log(div.outerHTML);
+
+// 使用 classList API 移除、添加class
+div.classList.remove("foo");
+div.classList.add("anotherclass");
+
+// <div class="anotherclass"></div>
+console.log(div.outerHTML);
+
+// 如果 visible class已存在，则移除它，否则添加它
+div.classList.toggle("visible");
+
+4. 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>createTextNode example</title>
+<script>
+function addTextNode(text) {
+  var newtext = document.createTextNode(text),  // 创建文本node
+      p1 = document.getElementById("p1");          // 获取element 
+
+  p1.appendChild(newtext);                                 //将TextNode作为element的child
+}
+</script>
+</head>
+
+<body>
+  <button onclick="addTextNode('YES! ');">YES!</button>
+  <button onclick="addTextNode('NO! ');">NO!</button>
+  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+
+  <hr />
+
+  <p id="p1">First line of paragraph.</p>
+</body>
+</html>

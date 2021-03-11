@@ -1,0 +1,26 @@
+优点： 容易design responsive layout，不需使用float和positioning
+
+使用条件：必须有一个container的display: flex，容器下的element即为flex items
+
+1) flex container property  容器属性
+
+容器常用property:
+
+justify-content: 	沿着水平轴 horizontal axis对齐 (左右居中)
+align-items:      	沿着竖直轴 vertical axis对齐      (上下居中)
+flex-direction    	沿着哪个方向放置flex items
+flex-wrap                 是否wrap所有的flex items
+flex-flow                  同时设置flex-direction和flex-wrap的缩写
+align-content           用来对齐flex lines
+
+
+2) flex items property
+
+order		改变flex item的顺序
+flex-grow		相对其他flex item的增长倍数
+flex-shrink	相对其他flex item的缩小倍数
+flex-basis		flex item的初始长度
+flex		是flex-grow, flex-shrink和flex-basis的缩写
+align-self		flex item的对齐方式，会覆盖掉容器的align-items
+
+

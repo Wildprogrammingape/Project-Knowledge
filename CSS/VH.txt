@@ -1,0 +1,10 @@
+％，VW和VH主要用于页边距margin，填充padding，间距spacing和宽度/高度width/height。
+
+VH代表“viewport height”，即可见屏幕的高度。
+
+100VH代表视口高度的100％，即屏幕的整个高度。
+
+VW代表“viewport width”，即可视屏幕的宽度。
+
+100VW表示视口宽度的100％，即屏幕的整个宽度。
+

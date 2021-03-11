@@ -1,0 +1,16 @@
+list-style property 是下面三个属性的缩写：
+
+
+list-style-type
+list-style-image
+list-style-position
+
+例子： 
+
+/* type , image , position */
+
+list-style: lower-roman url('../img/shape.png') outside;
+
+// No list style is used
+
+list-style: none;  

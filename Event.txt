@@ -1,0 +1,15 @@
+在event handler 函数中的 event参数为 event object对象，自动传递给event handler提供extra information，
+
+比如 event.target 这个 property 指的是该event发生的目标 element。
+
+例子：
+
+function bgChange(e) {
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  e.target.style.backgroundColor = rndCol;
+  console.log(e);
+}
+
+btn.addEventListener('click', bgChange);
+
+这里 e.target指的就是 button自身
