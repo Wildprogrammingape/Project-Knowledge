@@ -2,12 +2,12 @@
 
 1. block 
 
-take up the full row 占据一整行，如div默认为block level
+take up the full row 占据一整行，如div, p, h, ul, li 默认为block level
 
 2. inline
 
-take up space as much as necessary只占据需要的空间，如span
-缺点： 不能使用width和height 属性
+take up space as much as necessary只占据需要的空间，如span, img, a, strong, em
+缺点： 不能使用width和height 属性, 没有上下的margin
 
 3. inline-block
 
