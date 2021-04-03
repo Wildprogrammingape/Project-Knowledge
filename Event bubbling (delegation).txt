@@ -1,0 +1,18 @@
+event starts at the event target, them bubbles up the parent to see if there's event listenner
+
+一个event一开始查看当前target是否有event listener，一直查看母节点 如 li -> ul -> body
+
+可以通过 event.stopPropagation() 阻止当前event 向母节点bubble
+
+
+event delegation的例子，通过给母元素添加event listener来实现子元素的功能
+
+ul.addEventListener('click', e =>{
+    if(e.target.tagName === 'LI'){
+        e.target.remove();
+    }
+});
+
+当点击某个li 时，向上bubble到ul发现EventListener，判断是否为 li而不是空白处，然后删除
+
+两个优点: 1. 只给ul添加EventListener节省JS代码量  2. 新添加的li也在ul里，因此不用担心新li不会触发event的问题
